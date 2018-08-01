@@ -806,6 +806,11 @@ impl<H> Easy2<H> {
     pub fn get_mut(&mut self) -> &mut H {
         &mut self.inner.handler
     }
+    
+    /// Consumes this Easy2, and returns ownership of the wrapped handler.
+    pub fn into_handler(self) -> H {
+        self.inner.handler   
+    }
 
     // =========================================================================
     // Error options
