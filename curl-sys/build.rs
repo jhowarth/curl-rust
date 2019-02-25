@@ -26,6 +26,7 @@ fn main() {
     let dst = PathBuf::from(env::var_os("OUT_DIR").unwrap());
     let windows = target.contains("windows");
 
+    /*
     // OSX and Haiku ships libcurl by default, so we just use that version
     // unconditionally.
     if target.contains("apple") || target.contains("haiku") {
@@ -50,6 +51,7 @@ fn main() {
                                pkgconfig ({:?}), compiling it from source...", e),
         }
     }
+    */
 
     if try_vcpkg() {
         return;
